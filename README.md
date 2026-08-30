@@ -18,7 +18,7 @@ The `github>` preset scheme works from both GitHub and Azure DevOps Renovate run
 ## Policy summary
 
 - **Automerged** (after CI passes): external `devDependency` patch updates only, on the release branch
-- **Manual review required**: `@achimismaili/**` packages, `turbo`, `@inlang/paraglide-js`, any minor update, any runtime dependency change
+- **Manual review required**: `@easy-web/**` packages, `turbo`, `@inlang/paraglide-js`, any minor update, any runtime dependency change
 - **Never automerged**: major updates — one PR per package for review context
 
 ## Schedule
