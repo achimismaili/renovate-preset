@@ -12,16 +12,16 @@
   "labels": ["dependencies"],
   "packageRules": [
     {
-      "description": "Group all internal @achimismaili packages - manual review required (published on public npm from github.com/achimismaili/easy-web)",
-      "matchPackageNames": ["@achimismaili/**"],
-      "groupName": "achimismaili internal packages",
+      "description": "Group all internal @easy-web packages - manual review required (published on public npm from github.com/achimismaili/easy-web)",
+      "matchPackageNames": ["@easy-web/**"],
+      "groupName": "easy-web internal packages",
       "automerge": false
     },
     {
       "description": "Automerge external devDep patches only (conservative policy)",
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["patch"],
-      "matchPackageNames": ["!@achimismaili/**", "!turbo", "!@inlang/paraglide-js"],
+      "matchPackageNames": ["!@easy-web/**", "!turbo", "!@inlang/paraglide-js"],
       "matchCurrentVersion": "!/^0/",
       "automerge": true,
       "automergeType": "branch"
