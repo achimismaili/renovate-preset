@@ -18,8 +18,13 @@ The `github>` preset scheme works from both GitHub and Azure DevOps Renovate run
 ## Policy summary
 
 - **Automerged** (after CI passes): external `devDependency` patch updates only, on the release branch
-- **Manual review required**: `@easy-web/**` packages, `turbo`, `@inlang/paraglide-js`, any minor update, any runtime dependency change
+- **Manual review required**: internal easy-web packages (`@easy-web/**` on the Azure DevOps instances, `@achimismaili/easy-web-*` on the GitHub-hosted portfolio), `turbo`, `@inlang/paraglide-js`, any minor update, any runtime dependency change
 - **Never automerged**: major updates — one PR per package for review context
+
+> Both easy-web scopes must stay listed in `default.json`. The same source repo
+> publishes under two npm scopes, and a glob that only covers one of them makes
+> the grouping rule — and the automerge exclusion that depends on it — silently
+> inert for the other.
 
 ## Schedule
 

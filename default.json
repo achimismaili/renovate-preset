@@ -12,8 +12,8 @@
   "labels": ["dependencies"],
   "packageRules": [
     {
-      "description": "Group all internal @easy-web packages - manual review required (published on public npm from github.com/achimismaili/easy-web)",
-      "matchPackageNames": ["@easy-web/**"],
+      "description": "Group all internal easy-web packages - manual review required (published on public npm from github.com/achimismaili/easy-web). Two npm scopes are in use: the Azure DevOps instances consume @easy-web/*, the GitHub-hosted portfolio consumes @achimismaili/easy-web-*. Both must be listed or the group silently never matches.",
+      "matchPackageNames": ["@easy-web/**", "@achimismaili/easy-web-*"],
       "groupName": "easy-web internal packages",
       "automerge": false
     },
@@ -21,7 +21,7 @@
       "description": "Automerge external devDep patches only (conservative policy)",
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["patch"],
-      "matchPackageNames": ["!@easy-web/**", "!turbo", "!@inlang/paraglide-js"],
+      "matchPackageNames": ["!@easy-web/**", "!@achimismaili/easy-web-*", "!turbo", "!@inlang/paraglide-js"],
       "matchCurrentVersion": "!/^0/",
       "automerge": true,
       "automergeType": "branch"
